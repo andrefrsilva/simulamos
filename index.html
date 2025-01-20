@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" href="https://i.postimg.cc/yxG8V0YH/hospital-1.png">
+<meta property="og:title" content="Simulamos">
+<meta property="og:description" content="Onde Simulamos Exatamente o que Interessa na Prática. Exemplos, Treino e Avaliação. Com a melhor IA.">
+<meta property="og:image" content="https://cdn-icons-png.flaticon.com/128/7525/7525860.png">
+<meta property="og:url" content="https://simulamos.pt">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&family=Source+Sans+3:wght@200..900&display=swap" rel="stylesheet">
+
+<title>Simulamos! A melhor forma de saber o que fazer na prática, treinar e ser avaliado</title>
+<style>
+  /* GLOBAL BLACK & WHITE STYLE */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+  }
+  body {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+    position: relative;
+  }
+  h1 {
+    font-size: 0.8rem;
+    margin-bottom: 0.6rem;
+    text-align: center;
+    font-weight: 200;
+    letter-spacing: 1px;
+  }
+  video {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 60vh;
+    margin-bottom: 2rem;
+  }
+  .footer {
+    position: absolute;
+    bottom: 1rem;
+    text-align: center;
+    color: #fff;
+    font-size: 0.9rem;
+  }
+  .footer a {
+    color: #fff;
+    text-decoration: underline;
+    cursor: pointer;
+    margin: 0 1rem;
+  }
+  #pricingModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+  }
+  .pricingModalContent {
+    background: #fff;
+    color: #000;
+    padding: 1.5rem;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .pricingModalContent h2 {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    text-align: center;
+    color: #333;
+  }
+  .pricingModalContent label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #555;
+  }
+  .pricingModalContent input,
+  .pricingModalContent textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  .pricingModalContent textarea {
+    resize: none;
+    height: 100px;
+  }
+  .pricingModalContent button {
+    padding: 0.8rem;
+    font-size: 1rem;
+    color: #fff;
+    background: #333;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .pricingModalContent button:hover {
+    background: #555;
+  }
+  .pricingModalContent .closePricingModalBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  .pricingModalContent .statusMessage {
+    font-size: 0.9rem;
+    color: green;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+  <!-- MAIN CONTENT -->
+  <h1 id="pageTitle" style="font-size: 3em; margin-bottom: 2rem;">Bem-Vindo ao Futuro</h1>
+  <h1>Onde Simulamos Exatamente o que Interessa na Prática.</h1>
+  <h1>Exemplos, Treino e Avaliação.</h1>
+  <h1>Com a melhor IA e a melhor Neurociência.</h1>
+  <br>
+  <video controls>
+    <source src="https://github.com/andrefrsilva/simulamos/raw/refs/heads/main/Scenulator%20(1).mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <!-- FOOTER -->
+  <div class="footer">
+    <span>
+      <a id="mcminskyLink" href="https://simulamos.pt/" target="_blank" rel="noopener noreferrer">Simulamos AI</a> 
+      © 2025
+    </span>
+    <a id="pricingLink" href="#">Preço</a>
+  </div>
+
+  <!-- PRICING MODAL -->
+  <div id="pricingModal">
+    <div class="pricingModalContent">
+      <button class="closePricingModalBtn" id="closePricingModalBtn">×</button>
+      <h2>Pedido de Informações</h2>
+      <form id="pricingForm">
+        <!-- IMPORTANT: the name attributes match your Google Form's field IDs -->
+        <label for="name">Nome</label>
+        <input type="text" id="name" name="entry.76054561" placeholder="Seu nome">
+        
+        <label for="email">Email</label>
+        <input type="email" id="email" name="entry.1313481275" placeholder="Seu email">
+        
+        <label for="phone">Telefone</label>
+        <input type="tel" id="phone" name="entry.11912760" placeholder="Seu telefone">
+        
+        <label for="message">Mensagem *</label>
+        <textarea id="message" name="entry.2069335850" placeholder="Sua mensagem" required></textarea>
+        
+        <button type="submit">Enviar</button>
+        <div class="statusMessage" id="statusMessage"></div>
+      </form>
+    </div>
+  </div>
+
+<script>
+  /********************************************************
+    1) USER ID MANAGEMENT
+  ********************************************************/
+  let userID = localStorage.getItem("myUserID");
+  if (!userID) {
+    userID = "user-" + Math.floor(Math.random() * 1e15);
+    localStorage.setItem("myUserID", userID);
+  }
+
+  /********************************************************
+    2) GOOGLE FORM CONFIGURATION
+       (Same form used by your other working site)
+  ********************************************************/
+  const CONTACT_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSflzspmuBWoD3OA5cISJBwFWuLlIoYNpBAYi9KuG-fs2VYMjA/formResponse";
+
+  // These IDs must match your Google Form fields
+  const FIELD_NOME     = "entry.76054561";   // Nome
+  const FIELD_EMAIL    = "entry.1313481275"; // Email
+  const FIELD_TELEFONE = "entry.11912760";   // Telefone
+  const FIELD_MENSAGEM = "entry.2069335850"; // Mensagem
+
+  // Helper to send data to Google Forms
+  function sendToGoogleForms(formData) {
+    // Just do a POST with no-cors
+    return fetch(CONTACT_FORM_URL, {
+      method: "POST",
+      mode: "no-cors",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: formData.toString(),
+    })
+    .then(() => {
+      // no-cors won't truly tell us success/failure, but at least we attempt
+      console.log("Google Forms submission attempted");
+    })
+    .catch(err => console.error("Google Forms submission failed:", err));
+  }
+
+  /********************************************************
+    3) ON PAGE LOAD => LOG "Entrou no Site."
+       Nome = userID, Mensagem = "[Simulamos] Entrou no Site."
+  ********************************************************/
+  {
+    const formData = new URLSearchParams();
+    formData.append(FIELD_NOME, userID);
+    formData.append(FIELD_MENSAGEM, "[Simulamos] Entrou no Site.");
+    sendToGoogleForms(formData);
+  }
+
+  /********************************************************
+    4) PRICING MODAL EVENTS => "Clicou no Preço."
+  ********************************************************/
+  const pricingLink = document.getElementById("pricingLink");
+  const pricingModal = document.getElementById("pricingModal");
+  const closePricingModalBtn = document.getElementById("closePricingModalBtn");
+
+  // Open Modal => also log "Clicou no Preço."
+  pricingLink.addEventListener("click", (e) => {
+    e.preventDefault();
+    pricingModal.style.display = "flex";
+
+    const clickData = new URLSearchParams();
+    clickData.append(FIELD_NOME, userID);
+    clickData.append(FIELD_MENSAGEM, "[Simulamos] Clicou no Preço.");
+    sendToGoogleForms(clickData);
+  });
+
+  // Close Modal
+  closePricingModalBtn.addEventListener("click", () => {
+    pricingModal.style.display = "none";
+  });
+
+  /********************************************************
+    5) CONTACT FORM SUBMISSION
+       Submit Nome, Email, Telefone, Mensagem with "[Simulamos]"
+  ********************************************************/
+  const pricingForm = document.getElementById("pricingForm");
+  const statusMessage = document.getElementById("statusMessage");
+
+  pricingForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const nome     = pricingForm.querySelector('[name="entry.76054561"]').value.trim() || userID;
+    const email    = pricingForm.querySelector('[name="entry.1313481275"]').value.trim();
+    const telefone = pricingForm.querySelector('[name="entry.11912760"]').value.trim();
+    const mensagem = pricingForm.querySelector('[name="entry.2069335850"]').value.trim();
+
+    if (!mensagem) {
+      statusMessage.textContent = "Erro: A mensagem é obrigatória.";
+      return;
+    }
+
+    // Prepend "[Simulamos]" to the user message
+    const formData = new URLSearchParams();
+    formData.append(FIELD_NOME, nome);
+    formData.append(FIELD_EMAIL, email);
+    formData.append(FIELD_TELEFONE, telefone);
+    formData.append(FIELD_MENSAGEM, `[Simulamos] ${mensagem}`);
+
+    sendToGoogleForms(formData).then(() => {
+      statusMessage.textContent = "Mensagem enviada com sucesso!";
+      pricingForm.reset();
+    });
+  });
+</script>
+
+</body>
+</html>
